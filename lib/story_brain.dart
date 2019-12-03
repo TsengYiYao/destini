@@ -56,15 +56,27 @@ class StoryBrain {
 
 //TODO:x Step 17 - Create a method called nextStory(), it should not have any outputs but it should have 1 input called choiceNumber which will be the choice number (int) made by the user.
   void nextStory(int choiceNumber) {
-    switch (choiceNumber) {
+    switch (storyNumber) {
       case 0:
-        storyNumber = 1;
+        if (choiceNumber == 1)
+          storyNumber = 1;
+        else
+          storyNumber = 2;
+
         break;
       case 1:
-        storyNumber = 2;
+        if (choiceNumber == 1)
+          storyNumber = 2;
+        else
+          storyNumber = 3;
+
         break;
       case 2:
-        storyNumber = 3;
+        if (choiceNumber == 1)
+          storyNumber = 4;
+        else
+          storyNumber = 5;
+
         break;
       default:
         storyNumber = 0;
